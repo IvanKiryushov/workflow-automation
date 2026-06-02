@@ -9,7 +9,9 @@
         content="Workflow Automation Architect. Transforming manual engineering tasks into scalable automation via Python, n8n, and custom bots.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -36,10 +38,7 @@
             </div>
 
             <div class="nav-center">
-                <div class="nav-status-container">
-                    <span class="status-dot"></span>
-                    <span id="dynamic-status" class="status-text">Workflow Automation Architect</span>
-                </div>
+                <!-- Status container removed for cleaner UX -->
             </div>
             <div class="nav-right">
                 <a href="ru.html" class="lang-stack">
@@ -70,8 +69,8 @@
         </div>
         <div class="drawer-content">
             <ul class="drawer-nav">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#stats">Impact</a></li>
+                <li><a href="#services">Solutions</a></li>
+                <li><a href="#stats">Efficiency</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Stack</a></li>
             </ul>
@@ -89,21 +88,22 @@
         </div>
     </div>
 
-    <header class="hero">
+    <header id="home" class="hero">
         <div class="container hero-content fade-up">
             <div class="hero-text-block">
                 <p class="hero-name-tag">Ivan Kiryushov</p>
-                <h1>Workflow Automation <br><span class="accent">Architect</span></h1>
+                <h1>Workflow Automation <br><span class="accent">& AI Solutions</span></h1>
                 <p class="subtitle" style="max-width: 650px;">
-                    I spent 8 years deep inside AEC megaprojects — from massive residential complexes to a 74-story
+                    I spent 8 years deep inside complex AEC projects — from massive residential complexes to a 74-story
                     business tower and high-LOD industrial logistics hubs.<br><br>
-                    Along the way, I realized the biggest bottleneck is often not the software. It's the broken
-                    workflows around it. So I started building tools to fix them: from RAG assistants to production
-                    Python bots.
+                    The real bottleneck isn't the software itself — it's the broken workflows connecting it. That’s why
+                    I build tools to fix them: from RAG assistants to production Python bots.
                 </p>
                 <div class="hero-actions">
-                    <a href="assets/Ivan_Kiryushov_Resume_EN.pdf" class="btn btn-primary" download>Download Resume PDF
-                        <i class="fas fa-file-pdf"></i></a>
+                    <a href="https://t.me/bimivan" target="_blank" class="btn btn-primary">Discuss Project <i
+                            class="fab fa-telegram-plane"></i></a>
+                    <a href="assets/Ivan_Kiryushov_Resume_EN.pdf" class="btn btn-secondary" download>Download
+                        PDF-resume</a>
                 </div>
             </div>
 
@@ -118,60 +118,54 @@
 
     <section id="services" class="services section-pad">
         <div class="container">
-            <h2 class="section-title text-center fade-up">What I <span class="accent">Build</span></h2>
+            <h2 class="section-title text-center fade-up">Solutions & <span class="accent">Expertise</span></h2>
             <div class="services-list fade-up">
 
-                <div class="service-accordion glass-card">
-                    <button class="service-header" aria-expanded="false">
-                        <div class="service-header-left">
-                            <span class="service-title">Process Automation & AI Integration</span>
-                        </div>
-                        <i class="fas fa-chevron-down service-chevron"></i>
-                    </button>
-                    <div class="service-body">
-                        <p>Audit broken workflows, then fix them with code. I build Python scripts, n8n pipelines, and
-                            RAG AI assistants that navigate your knowledge base (Confluence, Notion, Google Drive) and
-                            answer questions instantly — no more Ctrl+F through 500-page docs.</p>
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">Workflow Automation & AI</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>I reduce operational delays by fixing broken workflows with code. I build Python scripts, n8n pipelines, and RAG AI assistants that navigate your knowledge base and answer questions instantly — saving your team hundreds of hours on manual data processing.</p>
                         <div class="service-tags">
-                            <span>Python</span><span>n8n</span><span>RAG / Vector
-                                DB</span><span>Confluence</span><span>Jira Automation</span>
+                            <span>Python</span>
+                            <span>n8n</span>
+                            <span>RAG / Vector DB</span>
+                            <span>Confluence</span>
+                            <span>Jira Automation</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-accordion glass-card">
-                    <button class="service-header" aria-expanded="false">
-                        <div class="service-header-left">
-                            <span class="service-title">Bots, Pipelines & Integrations</span>
-                        </div>
-                        <i class="fas fa-chevron-down service-chevron"></i>
-                    </button>
-                    <div class="service-body">
-                        <p>Production-grade Telegram bots deployed on Docker/VPS — not hobby scripts. I wire them into
-                            your CRM, Google Sheets, WhatsApp, or internal APIs. I also build data pipelines that run
-                            quietly in the background and never need babysitting.</p>
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">Bots & System Integrations</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>I build production-grade bots and industrial integrations to eliminate manual data entry. Whether wiring Telegram to your CRM or building automated data flows, I ensure your systems talk to each other reliably.</p>
                         <div class="service-tags">
-                            <span>FastAPI</span><span>Aiogram</span><span>Docker</span><span>VPS</span><span>Webhooks</span><span>Google
-                                Sheets API</span>
+                            <span>FastAPI</span>
+                            <span>Aiogram</span>
+                            <span>Docker</span>
+                            <span>VPS</span>
+                            <span>Webhooks</span>
+                            <span>Google Sheets API</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-accordion glass-card">
-                    <button class="service-header" aria-expanded="false">
-                        <div class="service-header-left">
-                            <span class="service-title">Digital Strategy & Systems Design</span>
-                        </div>
-                        <i class="fas fa-chevron-down service-chevron"></i>
-                    </button>
-                    <div class="service-body">
-                        <p>Before touching any code, I run a structured process audit. I interview the team (CustDev),
-                            map the real bottlenecks, and design a digital system — Jira structure, SLA frameworks,
-                            regulation rollouts. Figma prototyping if a UI is involved. The result: a clear roadmap, not
-                            a pile of features nobody will use.</p>
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">Digital Strategy & Systems Design</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>Before writing code, I audit processes to maximize ROI. By interviewing your team and mapping bottlenecks, I design digital systems (Jira structures, SLA frameworks, UI prototypes) that deliver clear business value, not just isolated features.</p>
                         <div class="service-tags">
-                            <span>Jira Service Desk</span><span>Figma</span><span>CustDev</span><span>Process
-                                Mapping</span><span>SLA Design</span>
+                            <span>Jira Service Desk</span>
+                            <span>Figma</span>
+                            <span>CustDev</span>
+                            <span>Process Mapping</span>
+                            <span>SLA Design</span>
                         </div>
                     </div>
                 </div>
@@ -182,7 +176,7 @@
 
     <section id="stats" class="stats">
         <div class="container fade-up" style="margin-bottom: 40px;">
-            <h2 class="section-title text-center">Professional <span class="accent">Impact</span></h2>
+            <h2 class="section-title text-center">Efficiency & <span class="accent">Scaling</span></h2>
         </div>
         <div class="container stats-grid delay-1 fade-up">
             <div class="stat-card glass-card">
@@ -210,7 +204,7 @@
 
     <section id="experience" class="experience section-pad">
         <div class="container">
-            <h2 class="section-title text-center fade-up">Strong <span class="accent">Background</span></h2>
+            <h2 class="section-title text-center fade-up">Professional <span class="accent">Experience</span></h2>
 
             <div class="timeline">
                 <div class="timeline-item fade-up">
@@ -218,8 +212,8 @@
                     <div class="glass-card timeline-content">
                         <div class="job-header">
                             <div>
-                                <h3>Product Manager / BIM Coordinator</h3>
-                                <div class="company"><i class="fas fa-building"></i> DOGMA</div>
+                                <h3>Senior BIM Coordinator</h3>
+                                <div class="company">DOGMA</div>
                                 <span class="company-tagline">TOP-5 Residential Developer in Russia</span>
                             </div>
                             <div class="period">2024 — 2026</div>
@@ -242,8 +236,8 @@
                     <div class="glass-card timeline-content">
                         <div class="job-header">
                             <div>
-                                <h3>Team Lead / Senior BIM Coordinator</h3>
-                                <div class="company"><i class="fas fa-building"></i> WE-ON Group</div>
+                                <h3>BIM Team Lead (Structures) </h3>
+                                <div class="company">WE-ON Group</div>
                                 <span class="company-tagline">Leading engineering firm with deep automation focus</span>
                             </div>
                             <div class="period">2022 — 2024</div>
@@ -269,7 +263,7 @@
                                     <div class="job-header">
                                         <div>
                                             <h3>BIM Coordinator</h3>
-                                            <div class="company"><i class="fas fa-city"></i> Severin Development</div>
+                                            <div class="company">Severin Development</div>
                                             <span class="company-tagline">Innovation incubator & birthplace of the
                                                 "Signal"
                                                 ecosystem and 3D-scanning technologies</span>
@@ -294,7 +288,7 @@
                                     <div class="job-header">
                                         <div>
                                             <h3>BIM Coordinator</h3>
-                                            <div class="company"><i class="fas fa-industry"></i> MK3 Engineering</div>
+                                            <div class="company">MK3 Engineering</div>
                                             <span class="company-tagline">Award-winning industrial & high-LOD design
                                                 experts</span>
                                         </div>
@@ -317,11 +311,11 @@
 
     <section id="skills" class="skills section-pad">
         <div class="container fade-up">
-            <h2 class="section-title text-center">Engineering <span class="accent">Stack</span></h2>
+            <h2 class="section-title text-center"><span class="accent">Stack</span></h2>
             <div class="skills-grid">
                 <!-- AI & Automation -->
                 <div class="glass-card skill-category">
-                    <h3><i class="fas fa-brain"></i> AI & R&D</h3>
+                    <h3>AI & R&D</h3>
                     <div class="skill-tags">
                         <span>RAG (Vector DB)</span>
                         <span>LLM Orchestration</span>
@@ -331,7 +325,7 @@
                 </div>
                 <!-- Core Dev -->
                 <div class="glass-card skill-category">
-                    <h3><i class="fas fa-code"></i> Automation & Dev</h3>
+                    <h3>Automation & Dev</h3>
                     <div class="skill-tags">
                         <span>Python (Revit API)</span>
                         <span>Dynamo (Expert)</span>
@@ -341,7 +335,7 @@
                 </div>
                 <!-- Management -->
                 <div class="glass-card skill-category">
-                    <h3><i class="fas fa-project-diagram"></i> Product & BIM</h3>
+                    <h3>Product & BIM</h3>
                     <div class="skill-tags">
                         <span>Jira Service Desk</span>
                         <span>Figma (UI/UX)</span>
@@ -357,8 +351,8 @@
     <footer class="footer">
         <div class="container footer-content fade-up">
             <div class="footer-cta">
-                <h2>Get in Touch</h2>
-                <p>Available for consulting and freelance projects.</p>
+                <h2>Let's Talk <span class="accent">Business</span></h2>
+                <p>Available for select automation projects.</p>
             </div>
             <div class="social-links">
                 <a href="https://t.me/bimivan" target="_blank" class="glass-icon"><i

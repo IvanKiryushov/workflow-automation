@@ -86,86 +86,127 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Start interval without an immediate call to avoid initial flicker
         setInterval(updateStatus, 5000);
-        // Mobile Menu Logic (Side Drawer)
-        const menuToggle = document.getElementById('menu-toggle');
-        const closeDrawer = document.getElementById('close-drawer');
-        const mobileDrawer = document.getElementById('mobile-drawer');
-        const menuDimmer = document.getElementById('menu-dimmer');
-        const drawerLinks = document.querySelectorAll('.drawer-nav a');
-
-        const toggleMenu = (show) => {
-            mobileDrawer.classList.toggle('active', show);
-            menuDimmer.classList.toggle('active', show);
-            menuToggle.classList.toggle('active', show); // Trigger burger animation
-            document.body.style.overflow = show ? 'hidden' : '';
-        };
-
-        if (menuToggle && mobileDrawer && menuDimmer) {
-            menuToggle.addEventListener('click', () => toggleMenu(true));
-            closeDrawer.addEventListener('click', () => toggleMenu(false));
-            menuDimmer.addEventListener('click', () => toggleMenu(false));
-
-            drawerLinks.forEach(link => {
-                link.addEventListener('click', () => toggleMenu(false));
-            });
-
-            // Проверка параметра в URL для сохранения меню открытым (бесшовное переключение языка)
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('menu') === 'active') {
-                // Временно отключаем анимацию для эффекта "мгновенного" появления
-                mobileDrawer.style.transition = 'none';
-                menuDimmer.style.transition = 'none';
-                
-                toggleMenu(true);
-
-                // Возвращаем анимацию для последующих действий
-                setTimeout(() => {
-                    mobileDrawer.style.transition = '';
-                    menuDimmer.style.transition = '';
-                    // Очищаем URL от параметра, чтобы при ручном обновлении меню не открывалось само
-                    window.history.replaceState({}, document.title, window.location.pathname);
-                }, 50);
-            }
-        }
-        // Универсальная логика аккордеонов (Services, Experience и т.д.)
-        const initAccordion = (containerSelector, headerSelector, bodySelector) => {
-            const accordions = document.querySelectorAll(containerSelector);
-            accordions.forEach(accordion => {
-                const header = accordion.querySelector(headerSelector);
-                const body = accordion.querySelector(bodySelector);
-
-                if (!header || !body) return;
-
-                header.addEventListener('click', () => {
-                    const isOpen = accordion.classList.contains('is-open');
-
-                    if (isOpen) {
-                        // Закрываем
-                        body.style.maxHeight = body.scrollHeight + 'px';
-                        requestAnimationFrame(() => {
-                            body.style.maxHeight = '0';
-                        });
-                        accordion.classList.remove('is-open');
-                        header.setAttribute('aria-expanded', 'false');
-                    } else {
-                        // Открываем
-                        body.style.maxHeight = body.scrollHeight + 'px';
-                        accordion.classList.add('is-open');
-                        header.setAttribute('aria-expanded', 'true');
-                        // После анимации убираем жёсткий px, чтобы контент адаптировался (например, при ресайзе)
-                        body.addEventListener('transitionend', () => {
-                            if (accordion.classList.contains('is-open')) {
-                                body.style.maxHeight = 'none';
-                            }
-                        }, { once: true });
-                    }
-                });
-            });
-        };
-
-        // Инициализируем аккордеоны для разных секций
-        initAccordion('.service-accordion', '.service-header', '.service-body');
-        initAccordion('.exp-accordion', '.exp-header', '.exp-body');
     }
+    
+    // Mobile Menu Logic (Side Drawer)
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeDrawer = document.getElementById('close-drawer');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const menuDimmer = document.getElementById('menu-dimmer');
+    const drawerLinks = document.querySelectorAll('.drawer-nav a');
+
+    const toggleMenu = (show) => {
+        mobileDrawer.classList.toggle('active', show);
+        menuDimmer.classList.toggle('active', show);
+        menuToggle.classList.toggle('active', show); // Trigger burger animation
+        document.body.style.overflow = show ? 'hidden' : '';
+    };
+
+    if (menuToggle && mobileDrawer && menuDimmer) {
+        menuToggle.addEventListener('click', () => toggleMenu(true));
+        closeDrawer.addEventListener('click', () => toggleMenu(false));
+        menuDimmer.addEventListener('click', () => toggleMenu(false));
+
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+
+        // Проверка параметра в URL для сохранения меню открытым (бесшовное переключение языка)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('menu') === 'active') {
+            // Временно отключаем анимацию для эффекта "мгновенного" появления
+            mobileDrawer.style.transition = 'none';
+            menuDimmer.style.transition = 'none';
+            
+            toggleMenu(true);
+
+            // Возвращаем анимацию для последующих действий
+            setTimeout(() => {
+                mobileDrawer.style.transition = '';
+                menuDimmer.style.transition = '';
+                // Очищаем URL от параметра, чтобы при ручном обновлении меню не открывалось само
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }, 50);
+        }
+    }
+    // Обработка перехода по языкам (бесшовный скролл)
+    const langSwitchers = document.querySelectorAll('.lang-stack');
+    langSwitchers.forEach(switcher => {
+        switcher.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetUrl = this.getAttribute('href');
+            
+            const sections = document.querySelectorAll('section[id], header[id]');
+            let currentId = 'home';
+            let maxVisible = 0;
+
+            sections.forEach(sec => {
+                const rect = sec.getBoundingClientRect();
+                const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+                if (visibleHeight > maxVisible) {
+                    maxVisible = visibleHeight;
+                    currentId = sec.id;
+                }
+            });
+
+            sessionStorage.setItem('scrollTarget', currentId);
+            window.location.href = targetUrl;
+        });
+    });
+
+    // Проверка сохраненного таргета для мгновенного прыжка
+    const scrollTarget = sessionStorage.getItem('scrollTarget');
+    if (scrollTarget) {
+        const element = document.getElementById(scrollTarget);
+        if (element) {
+            // Отключаем плавность для мгновенного позиционирования
+            document.documentElement.style.scrollBehavior = 'auto';
+            element.scrollIntoView();
+            // Возвращаем плавность через мгновение для обычного скролла пользователем
+            setTimeout(() => {
+                document.documentElement.style.scrollBehavior = '';
+            }, 50);
+        }
+        sessionStorage.removeItem('scrollTarget');
+    }
+
+    // Универсальная логика аккордеонов (Experience и т.д.)
+    const initAccordion = (containerSelector, headerSelector, bodySelector) => {
+        const accordions = document.querySelectorAll(containerSelector);
+        accordions.forEach(accordion => {
+            const header = accordion.querySelector(headerSelector);
+            const body = accordion.querySelector(bodySelector);
+
+            if (!header || !body) return;
+
+            header.addEventListener('click', () => {
+                const isOpen = accordion.classList.contains('is-open');
+
+                if (isOpen) {
+                    // Закрываем
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    requestAnimationFrame(() => {
+                        body.style.maxHeight = '0';
+                    });
+                    accordion.classList.remove('is-open');
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    // Открываем
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    accordion.classList.add('is-open');
+                    header.setAttribute('aria-expanded', 'true');
+                    // После анимации убираем жёсткий px, чтобы контент адаптировался (например, при ресайзе)
+                    body.addEventListener('transitionend', () => {
+                        if (accordion.classList.contains('is-open')) {
+                            body.style.maxHeight = 'none';
+                        }
+                    }, { once: true });
+                }
+            });
+        });
+    };
+
+    // Инициализируем аккордеоны для опыта
+    initAccordion('.exp-accordion', '.exp-header', '.exp-body');
 });
 
