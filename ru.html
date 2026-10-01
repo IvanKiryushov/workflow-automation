@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Иван Кирюшов | Workflow Automation Architect</title>
+    <title>Иван Кирюшов | Архитектор процессов и автоматизации</title>
     <meta name="description"
-        content="Workflow Automation Architect. Превращаю рутину в системную автоматизацию данных через Python, n8n и кастомных ботов.">
+        content="Архитектор процессов и автоматизации. Превращаю рутину в системную автоматизацию данных через Python, n8n и кастомных ботов.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=11">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
@@ -33,8 +33,25 @@
         <div class="container nav-content">
             <div class="nav-left">
                 <a href="#" class="logo">
-                    <img src="logo.png" alt="IK Logo" class="logo-img">
+                    <img src="logo.png?v=7" alt="IK Logo" class="logo-img logo-dark">
+                    <img src="logo-light.png?v=7" alt="IK Logo" class="logo-img logo-light">
                 </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Сменить тему">
+                    <svg class="theme-icon-dark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
 
             <div class="nav-center">
@@ -69,21 +86,22 @@
         </div>
         <div class="drawer-content">
             <ul class="drawer-nav">
+                <li><a href="#projects">Кейсы</a></li>
                 <li><a href="#services">Решения</a></li>
-                <li><a href="#stats">Эффективность</a></li>
                 <li><a href="#experience">Опыт</a></li>
                 <li><a href="#skills">Навыки</a></li>
             </ul>
             <div class="drawer-footer">
                 <p>Связаться:</p>
                 <div class="drawer-socials">
-                    <a href="https://t.me/bimivan" target="_blank" class="glass-icon"><i
+                    <a href="https://t.me/bimivan" target="_blank" class="glass-icon" title="Telegram" aria-label="Telegram"><i
                             class="fab fa-telegram-plane"></i></a>
-                    <a href="https://wa.me/79959209584" target="_blank" class="glass-icon"><i
+                    <a href="https://wa.me/79959209584" target="_blank" class="glass-icon" title="WhatsApp" aria-label="WhatsApp"><i
                             class="fab fa-whatsapp"></i></a>
-                    <a href="https://m.me/kiryvanya" target="_blank" class="glass-icon"><i
+                    <a href="https://m.me/kiryvanya" target="_blank" class="glass-icon" title="Messenger" aria-label="Messenger"><i
                             class="fab fa-facebook-messenger"></i></a>
-                    <a href="#" target="_blank" class="glass-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/ivan-kiriushov-4121ba403" target="_blank" class="glass-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~010f69036be68d81bb?mp_source=share" target="_blank" class="glass-icon" title="Upwork" aria-label="Upwork"><i class="fab fa-upwork"></i></a>
                 </div>
             </div>
         </div>
@@ -93,18 +111,15 @@
         <div class="container hero-content fade-up">
             <div class="hero-text-block">
                 <p class="hero-name-tag">Иван Кирюшов</p>
-                <h1>Системная автоматизация <br><span class="accent">& ИИ-решения</span></h1>
+                <h1>Архитектор процессов <br><span class="accent">и автоматизации</span></h1>
                 <p class="subtitle" style="max-width: 650px;">
-                    Я провел 8 лет внутри сложных архитектурных проектов — координировал данные для массивных жилых
-                    комплексов, 74-этажной
-                    бизнес-башни и высокодетализированных логистических центров.<br><br>
-                    Главное узкое место — чаще всего не сам софт, а сломанные рабочие процессы, связывающие данные.
-                    Поэтому я создаю инструменты, которые их чинят: от ИИ-ассистентов до промышленных Python-ботов.
+                    Проектирую цифровую инфраструктуру бизнеса: объединяю CRM, базы данных и командные каналы (Telegram, Slack) в сквозные сценарии. Использую гибридный стек — быстрый low-code (n8n, Make) для интеграций и Python/SQL для масштабируемой логики.<br><br>
+                    Внедряю прикладной AI там, где нужны не жесткие скрипты, а понимание контекста: автономные агенты для сортировки входящих потоков и RAG-поиск по закрытым базам знаний. За счет 8 лет инженерного бэкграунда гарантирую строгую валидацию данных, отказоустойчивость и защиту от сбоев.
                 </p>
                 <div class="hero-actions">
                     <a href="https://t.me/bimivan" target="_blank" class="btn btn-primary">Обсудить проект <i
                             class="fab fa-telegram-plane"></i></a>
-                    <a href="assets/Ivan_Kiryushov_Resume_RU.pdf" class="btn btn-secondary" download>Скачать
+                    <a href="assets/Ivan_Kiriushov_Resume_RU.pdf" class="btn btn-secondary" download>Скачать
                         PDF-резюме</a>
                 </div>
             </div>
@@ -112,68 +127,88 @@
             <div class="hero-photo-block" style="position: relative;">
                 <div class="glass-photo-wrapper"
                     style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; background: var(--glass-bg); border: 2px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2); position: relative; display: flex; align-items: center; justify-content: center;">
-                    <img src="profile.png" alt="Иван Кирюшов" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="profile.png?v=2" alt="Иван Кирюшов" class="profile-photo photo-dark" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="profile-light.png?v=2" alt="Иван Кирюшов" class="profile-photo photo-light" onerror="this.src='profile.png?v=2'" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="services" class="services section-pad">
+    <section id="projects" class="projects section-pad">
         <div class="container">
-            <h2 class="section-title text-center fade-up">Решения и <span class="accent">компетенции</span></h2>
-            <div class="services-list fade-up">
+            <h2 class="section-title text-center fade-up">Реализованные <span class="accent">кейсы</span></h2>
+            <div class="projects-list fade-up">
 
-                <div class="service-card glass-card">
-                    <div class="service-card-header">
-                        <span class="service-title">Автоматизация процессов и ИИ</span>
-                    </div>
-                    <div class="service-card-body">
-                        <p>Снижаю операционные издержки, чиня сломанные воркфлоу с помощью кода. Создаю Python-скрипты,
-                            пайплайны n8n и RAG-ассистентов, которые ориентируются в вашей базе знаний и отвечают
-                            мгновенно — экономя сотни часов ручного поиска данных.</p>
-                        <div class="service-tags">
+                <!-- AxonBot -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-badge">Enterprise RAG & AI Agent</span>
+                            <h3 class="project-title">AxonBot: Точный AI-поиск по корпоративной базе знаний</h3>
+                        </div>
+                        <div class="project-stack">
                             <span>Python</span>
-                            <span>n8n</span>
-                            <span>RAG / Vector DB</span>
-                            <span>Confluence</span>
-                            <span>Jira Automation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card glass-card">
-                    <div class="service-card-header">
-                        <span class="service-title">Боты и системные интеграции</span>
-                    </div>
-                    <div class="service-card-body">
-                        <p>Разрабатываю промышленные боты и интеграции для избавления от ручного ввода данных. Будь то
-                            связка Telegram с CRM или фоновые конвейеры данных, я гарантирую надежную синхронизацию
-                            ваших систем.</p>
-                        <div class="service-tags">
-                            <span>FastAPI</span>
                             <span>Aiogram</span>
+                            <span>n8n</span>
+                            <span>Qdrant</span>
+                            <span>GPT-4o</span>
                             <span>Docker</span>
-                            <span>VPS</span>
-                            <span>Webhooks</span>
-                            <span>Google Sheets API</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-block">
+                            <strong>Проблема и цена ошибки:</strong> В компаниях с сотнями разрозненных регламентов, технических стандартов и инструкций специалисты тратят по 20–30 минут на поиск одного узла или параметра. Из-за этого регламенты часто игнорируют, допуская брак на миллионы рублей, либо постоянно отвлекают ведущих инженеров от выпуска проектов.
+                        </div>
+                        <div class="project-block">
+                            <strong>Решение и окупаемость:</strong> AI-агент сокращает 20–30 минут ручного поиска до 4.3 секунд. Специалист задает вопрос свободным языком и получает строго заземленный ответ с кликабельной ссылкой на первоисточник в базе знаний, а также сопутствующие схемы, гифки и видео-инструкции.
+                        </div>
+                        <div class="project-metrics-row">
+                            <div class="project-metric-chip"><i class="fas fa-check-circle"></i> 97% Benchmark Score</div>
+                            <div class="project-metric-chip"><i class="fas fa-vial"></i> 60+ авто-тестов</div>
+                            <div class="project-metric-chip"><i class="fas fa-bolt"></i> 4.3с средний ответ</div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://t.me/bim_axonbot?start=landing_ru" target="_blank" rel="noopener noreferrer" class="btn-project-action btn-action-telegram">
+                                <i class="fab fa-telegram-plane"></i> Демо в Telegram
+                            </a>
+                            <a href="https://youtu.be/70uFZETkw-g" target="_blank" rel="noopener noreferrer" class="btn-project-action btn-action-youtube">
+                                <i class="fab fa-youtube"></i> Смотреть демо
+                            </a>
+                            <a href="assets/AxonBot_Landing.pdf" target="_blank" class="btn-project-action btn-action-pdf">
+                                <i class="fas fa-file-pdf"></i> Презентация кейса
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-card glass-card">
-                    <div class="service-card-header">
-                        <span class="service-title">Проектирование систем (Systems Design)</span>
+                <!-- DocFlow CRM Bot -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-badge">Sales Funnel & CRM Automation</span>
+                            <h3 class="project-title">DocFlow Bot: Автоматизация воронки продаж и клиентского документооборота</h3>
+                        </div>
+                        <div class="project-stack">
+                            <span>Python</span>
+                            <span>Aiogram</span>
+                            <span>FastAPI</span>
+                            <span>SQLite</span>
+                            <span>Telegraph API</span>
+                            <span>Docker</span>
+                        </div>
                     </div>
-                    <div class="service-card-body">
-                        <p>Прежде чем писать код, я провожу аудит для максимизации ROI. Анализируя узкие места через
-                            CustDev, я проектирую системы (структура Jira, SLA-фреймворки, UI-прототипы), которые
-                            приносят реальную бизнес-выгоду, а не просто набор фич.</p>
-                        <div class="service-tags">
-                            <span>Jira Service Desk</span>
-                            <span>Figma</span>
-                            <span>CustDev</span>
-                            <span>Process Mapping</span>
-                            <span>SLA Design</span>
+                    <div class="project-body">
+                        <div class="project-block">
+                            <strong>Проблема и цена ошибки:</strong> Менеджеры перегружены однотипными консультациями в чатах. Клиенты сомневаются в условиях и передают данные в разношерстном виде с опечатками. Ручной перенос данных в производство приводил к браку бланков, прямым финансовым потерям при переделках и срыву сроков.
+                        </div>
+                        <div class="project-block">
+                            <strong>Решение и окупаемость:</strong> Автономный Telegram-сервис закрывает первичный цикл сделки: нативная база знаний на Telegraph (мгновенный Instant View с видео-доказательствами) снимает сомнения клиентов, пошаговая FSM-валидация исключает опечатки, а мультивалютный калькулятор (RUB/VND/USDT) рассчитывает стоимость без скрытых комиссий. Данные поступают напрямую в производственный контур и админку.
+                        </div>
+                        <div class="project-metrics-row">
+                            <div class="project-metric-chip"><i class="fas fa-check-double"></i> -87% ошибок в анкетах</div>
+                            <div class="project-metric-chip"><i class="fas fa-tachometer-alt"></i> -80% консультаций</div>
+                            <div class="project-metric-chip"><i class="fas fa-shield-alt"></i> Без race conditions</div>
+                            <div class="project-metric-chip"><i class="fas fa-coins"></i> Мультивалютность</div>
                         </div>
                     </div>
                 </div>
@@ -182,31 +217,61 @@
         </div>
     </section>
 
-    <section id="stats" class="stats">
-        <div class="container fade-up" style="margin-bottom: 40px;">
-            <h2 class="section-title text-center">Эффективность и <span class="accent">масштабирование</span></h2>
-        </div>
-        <div class="container stats-grid delay-1 fade-up">
-            <div class="stat-card glass-card">
-                <div class="stat-number">170+</div>
-                <div class="stat-label">Кейсов Service Desk</div>
-                <div class="stat-desc">Проектирование систем в Jira.</div>
-            </div>
-            <div class="stat-card glass-card">
-                <div class="stat-number">60+</div>
-                <div class="stat-label">Инженерных решений</div>
-                <div class="stat-desc">Скрипты, боты и R&D (Python).</div>
-            </div>
-            <div class="stat-card glass-card">
-                <div class="stat-number">AI</div>
-                <div class="stat-label">RAG Системы</div>
-                <div class="stat-desc">Автоматизация поиска по ГОСТам.</div>
-            </div>
-            <div class="stat-card glass-card">
-                <div class="stat-number">74</div>
-                <div class="stat-label">Этажа</div>
-                <div class="stat-desc">Полная координация (АР, КР, ИОС) первого технологически сложного небоскреба.
+    <section id="services" class="services section-pad">
+        <div class="container">
+            <h2 class="section-title text-center fade-up">Решения и <span class="accent">компетенции</span></h2>
+            <div class="services-list fade-up">
+
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">Прикладной AI и умные воркфлоу</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>Освобождаю команду от механической работы с текстами и документами. Внедряю AI-агентов, которые сами разбирают входящую почту и заявки, вытаскивают нужные данные из договоров и счетов прямо в базу, или находят точные ответы по внутренним регламентам со ссылками на первоисточники. Если в документах нет ответа — система честно об этом скажет, а не будет выдумывать.</p>
+                        <div class="service-tags">
+                            <span>AI Agents & Workflows</span>
+                            <span>Document & Audio Parsing</span>
+                            <span>Knowledge Base RAG</span>
+                            <span>Smart Triage</span>
+                            <span>Evaluation Benchmarks</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">Архитектура процессов и аудит</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>Прежде чем писать код, я разбираюсь, где бизнес теряет время и деньги. Нахожу узкие места в передаче задач между отделами, убираю лишние звенья и считаю окупаемость автоматизации. Помогаю настроить прозрачный учет задач и сервисные очереди, ввести понятные SLA и выбрать подходящий инструмент — от быстрых сценариев в n8n, Make или Zapier до кастомного бэкенда.</p>
+                        <div class="service-tags">
+                            <span>Process Mapping</span>
+                            <span>Bottleneck Audit</span>
+                            <span>SLA & Team Metrics</span>
+                            <span>n8n / Make / Zapier</span>
+                            <span>Service Desk & Ticketing</span>
+                            <span>ROI Modeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">Связка систем и отказоустойчивость</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>Связываю разрозненные сервисы — CRM, базы данных, ERP, клиентские мессенджеры и внутренние чаты компании в единый конвейер. Данные синхронизируются автоматически без ручного копирования. Если внешний сервис завис или временно недоступен — очередь повторит попытку и не потеряет заявку, а защита от дублей сохранит учет чистым.</p>
+                        <div class="service-tags">
+                            <span>Event-Driven Architecture</span>
+                            <span>REST API & Webhooks</span>
+                            <span>Fault-Tolerant Pipelines</span>
+                            <span>FastAPI / Python</span>
+                            <span>PostgreSQL / SQLite</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -223,20 +288,13 @@
                             <div>
                                 <h3>Ведущий BIM-координатор</h3>
                                 <div class="company">DOGMA</div>
-                                <span class="company-tagline">Топ-5 застройщиков России</span>
+                                <span class="company-tagline">Топ-5 застройщиков жилой недвижимости в России</span>
                             </div>
                             <div class="period">2024 — 2026</div>
                         </div>
                         <ul class="job-details">
-                            <li><strong>Системная архитектура:</strong> Спроектировал воркфлоу BIM-департамента в Jira
-                                Service Desk. Обработал 170+ кейсов, из которых 38% — задачи сложной автоматизации и
-                                R&D. Внедрил прозрачные SLA.</li>
-                            <li><strong>Product Management:</strong> Сопровождение разработки плагинов «под ключ». От
-                                проведения провокационных CustDev-интервью до проектирования UI/UX интерфейсов в Figma.
-                            </li>
-                            <li><strong>Инжиниринг & AI:</strong> Разработка экосистемы Python-инструментов. Внедрил
-                                RAG-систему (AI-ассистент) для мгновенной навигации по корпоративной базе знаний и
-                                ГОСТам.</li>
+                            <li><strong>Запуск процессов с нуля:</strong> Разработал архитектуру и ТЗ для внедрения Jira Service Desk: система очередей задач, регламенты обработки инцидентов и трекинг R&D-автоматизации для 100+ инженеров. Внедрил прозрачную SLA-отчетность.</li>
+                            <li><strong>AI & Продукты:</strong> Прототип RAG-ассистента по корпоративным регламентам; 20+ CustDev-интервью и UI/UX в Figma для внутренних плагинов (сокращение времени обучения на 30%).</li>
                         </ul>
                     </div>
                 </div>
@@ -248,13 +306,12 @@
                             <div>
                                 <h3>BIM Lead | Конструктивные решения</h3>
                                 <div class="company">WE-ON Group</div>
-                                <span class="company-tagline">Лидер инжиниринга с мощной BIM-автоматизацией</span>
+                                <span class="company-tagline">Ведущее инженерное бюро с фокусом на автоматизацию</span>
                             </div>
                             <div class="period">2022 — 2024</div>
                         </div>
                         <ul class="job-details">
-                            <li><strong>Оптимизация:</strong> Сократил рутину в 20 раз за счет автоматизации. Внедрил
-                                GTD и Scrum-элементы в работу групп.</li>
+                            <li><strong>Автоматизация рутины:</strong> Пакет скриптов (Python / Revit API), ускоривший заполнение параметров проекта в 20 раз (с 15 минут до 45 секунд). Внедрил Scrum и GTD.</li>
                         </ul>
                     </div>
                 </div>
@@ -272,20 +329,15 @@
                                 <div class="glass-card timeline-content">
                                     <div class="job-header">
                                         <div>
-                                            <h3>BIM-координатор</h3>
+                                            <h3>BIM-координатор / Техлид проекта</h3>
                                             <div class="company">Северин Девелопмент</div>
-                                            <span class="company-tagline">Колыбель экосистемы "Signal" и передовых
-                                                технологий 3D-сканирования</span>
+                                            <span class="company-tagline">Инновационный инкубатор и колыбель экосистемы Signal</span>
                                         </div>
                                         <div class="period">2020 — 2021</div>
                                     </div>
                                     <ul class="job-details">
-                                        <li><strong>Сложное моделирование:</strong> Координация 74-этажной башни (АР,
-                                            КР, ИОС) в
-                                            Москва-Сити.</li>
-                                        <li><strong>R&D / Team Leading:</strong> Разработка процессов для технологии
-                                            Scan-to-BIM
-                                            (облака точек). Управление процессами распределения задач.</li>
+                                        <li><strong>74-этажная башня в Москва-Сити:</strong> Согласовывал требования к модели с заказчиком (LOD/LOI). Разработал алгоритм подъема модели по облакам точек 3D-сканирования (Scan-to-BIM).</li>
+                                        <li><strong>R&D и команда:</strong> Исследовал модели эксплуатации здания после сдачи. Проводил технические интервью кандидатов, нанимал исполнителей и собирал команду проекта.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -323,34 +375,41 @@
         <div class="container fade-up">
             <h2 class="section-title text-center"><span class="accent">Навыки</span></h2>
             <div class="skills-grid">
-                <!-- AI & Automation -->
+                <!-- Applied AI -->
                 <div class="glass-card skill-category">
-                    <h3>AI & R&D</h3>
+                    <h3>Прикладной AI и базы знаний</h3>
                     <div class="skill-tags">
-                        <span>RAG (Vector DB)</span>
+                        <span>RAG Architecture</span>
+                        <span>Vector Databases & Search</span>
                         <span>LLM Orchestration</span>
-                        <span>Aiogram / Telegram API</span>
-                        <span>Prompt Engineering</span>
+                        <span>Voice & Audio AI (STT / TTS)</span>
+                        <span>Structured Data Extraction</span>
+                        <span>Evaluation Benchmarks</span>
                     </div>
                 </div>
-                <!-- Core Dev -->
+                <!-- Process & Systems Architecture -->
                 <div class="glass-card skill-category">
-                    <h3>Automation & Dev</h3>
+                    <h3>Архитектура процессов и систем</h3>
                     <div class="skill-tags">
-                        <span>Python (Revit API)</span>
-                        <span>Dynamo (Expert)</span>
-                        <span>Meta API / Webhooks</span>
-                        <span>PyRevit / C# (Basic)</span>
+                        <span>BPMN & Sequence Diagrams</span>
+                        <span>Process Mapping & Flowcharts</span>
+                        <span>Service Desk & Ticketing</span>
+                        <span>SLA Frameworks</span>
+                        <span>CustDev & Requirements Analysis</span>
+                        <span>Figma (UI/UX Prototyping)</span>
                     </div>
                 </div>
-                <!-- Management -->
+                <!-- Integration & Backend -->
                 <div class="glass-card skill-category">
-                    <h3>Product & BIM</h3>
+                    <h3>Интеграции и бэкенд</h3>
                     <div class="skill-tags">
-                        <span>Jira Service Desk</span>
-                        <span>Figma (UI/UX)</span>
-                        <span>CustDev</span>
-                        <span>Revit / Navisworks</span>
+                        <span>Python (Asyncio)</span>
+                        <span>FastAPI</span>
+                        <span>Chatbots & Conversational UI</span>
+                        <span>n8n / Make / Zapier</span>
+                        <span>REST APIs & Webhooks</span>
+                        <span>PostgreSQL / SQLite</span>
+                        <span>Docker / VPS Deployment</span>
                     </div>
                 </div>
             </div>
@@ -364,17 +423,18 @@
                 <p>Обсудить проект</p>
             </div>
             <div class="social-links">
-                <a href="https://t.me/bimivan" target="_blank" class="glass-icon"><i
+                <a href="https://t.me/bimivan" target="_blank" class="glass-icon" title="Telegram" aria-label="Telegram"><i
                         class="fab fa-telegram-plane"></i></a>
-                <a href="https://wa.me/79959209584" target="_blank" class="glass-icon"><i
+                <a href="https://wa.me/79959209584" target="_blank" class="glass-icon" title="WhatsApp" aria-label="WhatsApp"><i
                         class="fab fa-whatsapp"></i></a>
-                <a href="https://m.me/kiryvanya" target="_blank" class="glass-icon"><i
+                <a href="https://m.me/kiryvanya" target="_blank" class="glass-icon" title="Messenger" aria-label="Messenger"><i
                         class="fab fa-facebook-messenger"></i></a>
-                <a href="#" target="_blank" class="glass-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/ivan-kiriushov-4121ba403" target="_blank" class="glass-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.upwork.com/freelancers/~010f69036be68d81bb?mp_source=share" target="_blank" class="glass-icon" title="Upwork" aria-label="Upwork"><i class="fab fa-upwork"></i></a>
             </div>
         </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
 
 </html>

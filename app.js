@@ -20,21 +20,55 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Эффект помутнения навигации при скролле вниз
-    const nav = document.querySelector('.glass-nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.background = 'rgba(5, 5, 8, 0.8)';
-            nav.style.backdropFilter = 'blur(15px)';
-            nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
-            nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+    // --- Логика переключения темы (Dark / Light) ---
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+    const applyTheme = (theme) => {
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
         } else {
-            nav.style.background = 'rgba(5, 5, 8, 0.3)';
-            nav.style.backdropFilter = 'none';
+            document.documentElement.removeAttribute('data-theme');
+        }
+    };
+
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else if (systemPrefersLight) {
+        applyTheme('light');
+    }
+
+    themeToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const nextTheme = isLight ? 'dark' : 'light';
+            applyTheme(nextTheme);
+            localStorage.setItem('theme', nextTheme);
+            updateNavScroll();
+        });
+    });
+
+    // Эффект помутнения навигации при скролле вниз (с учетом темы)
+    const nav = document.querySelector('.glass-nav');
+    const updateNavScroll = () => {
+        if (!nav) return;
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (window.scrollY > 50) {
+            nav.style.background = isLight ? 'rgba(248, 250, 252, 0.92)' : 'rgba(5, 5, 8, 0.85)';
+            nav.style.backdropFilter = 'blur(15px)';
+            nav.style.borderBottom = isLight ? '1px solid rgba(0, 0, 0, 0.08)' : '1px solid rgba(255, 255, 255, 0.08)';
+            nav.style.boxShadow = isLight ? '0 4px 20px rgba(0, 0, 0, 0.06)' : '0 4px 30px rgba(0, 0, 0, 0.5)';
+        } else {
+            nav.style.background = isLight ? 'rgba(248, 250, 252, 0.6)' : 'rgba(5, 5, 8, 0.3)';
+            nav.style.backdropFilter = 'blur(8px)';
             nav.style.borderBottom = '1px solid transparent';
             nav.style.boxShadow = 'none';
         }
-    });
+    };
+
+    window.addEventListener('scroll', updateNavScroll);
+    updateNavScroll();
 
     // Динамический статус в шапке (переключение ролей)
     const statusText = document.getElementById('dynamic-status');

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Ivan Kiryushov | Workflow Automation Architect</title>
+    <title>Ivan Kiriushov | Workflow Automation Architect</title>
     <meta name="description"
         content="Workflow Automation Architect. Transforming manual engineering tasks into scalable automation via Python, n8n, and custom bots.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=11">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
@@ -33,8 +33,25 @@
         <div class="container nav-content">
             <div class="nav-left">
                 <a href="#" class="logo">
-                    <img src="logo.png" alt="IK Logo" class="logo-img">
+                    <img src="logo.png?v=7" alt="IK Logo" class="logo-img logo-dark">
+                    <img src="logo-light.png?v=7" alt="IK Logo" class="logo-img logo-light">
                 </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon-dark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
 
             <div class="nav-center">
@@ -69,21 +86,22 @@
         </div>
         <div class="drawer-content">
             <ul class="drawer-nav">
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Solutions</a></li>
-                <li><a href="#stats">Efficiency</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Stack</a></li>
             </ul>
             <div class="drawer-footer">
                 <p>Contact me:</p>
                 <div class="drawer-socials">
-                    <a href="https://t.me/bimivan" target="_blank" class="glass-icon"><i
+                    <a href="https://t.me/bimivan" target="_blank" class="glass-icon" title="Telegram" aria-label="Telegram"><i
                             class="fab fa-telegram-plane"></i></a>
-                    <a href="https://wa.me/79959209584" target="_blank" class="glass-icon"><i
+                    <a href="https://wa.me/79959209584" target="_blank" class="glass-icon" title="WhatsApp" aria-label="WhatsApp"><i
                             class="fab fa-whatsapp"></i></a>
-                    <a href="https://m.me/bimivan" target="_blank" class="glass-icon"><i
+                    <a href="https://m.me/kiryvanya" target="_blank" class="glass-icon" title="Messenger" aria-label="Messenger"><i
                             class="fab fa-facebook-messenger"></i></a>
-                    <a href="#" target="_blank" class="glass-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/ivan-kiriushov-4121ba403" target="_blank" class="glass-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~010f69036be68d81bb?mp_source=share" target="_blank" class="glass-icon" title="Upwork" aria-label="Upwork"><i class="fab fa-upwork"></i></a>
                 </div>
             </div>
         </div>
@@ -92,18 +110,16 @@
     <header id="home" class="hero">
         <div class="container hero-content fade-up">
             <div class="hero-text-block">
-                <p class="hero-name-tag">Ivan Kiryushov</p>
-                <h1>Workflow Automation <br><span class="accent">& AI Solutions</span></h1>
+                <p class="hero-name-tag">Ivan Kiriushov</p>
+                <h1>Workflow Automation <br><span class="accent">Architect</span></h1>
                 <p class="subtitle" style="max-width: 650px;">
-                    I spent 8 years deep inside complex AEC projects — from massive residential complexes to a 74-story
-                    business tower and high-LOD industrial logistics hubs.<br><br>
-                    The real bottleneck isn't the software itself — it's the broken workflows connecting it. That’s why
-                    I build tools to fix them: from RAG assistants to production Python bots.
+                    Architecting digital business infrastructure: integrating CRMs, databases, and team channels (Telegram, Slack) into end-to-end workflows. Utilizing a pragmatic hybrid stack — agile low-code (n8n, Make) for rapid integrations and Python/SQL for scalable backend logic.<br><br>
+                    Deploying applied AI where context understanding is essential: autonomous agents for incoming stream triage and RAG systems over proprietary knowledge bases. Backed by 8 years of engineering discipline ensuring strict data validation, resilience, and failover protection.
                 </p>
                 <div class="hero-actions">
                     <a href="https://t.me/bimivan" target="_blank" class="btn btn-primary">Discuss Project <i
                             class="fab fa-telegram-plane"></i></a>
-                    <a href="assets/Ivan_Kiryushov_Resume_EN.pdf" class="btn btn-secondary" download>Download
+                    <a href="assets/Ivan_Kiriushov_Resume_EN.pdf" class="btn btn-secondary" download>Download
                         PDF-resume</a>
                 </div>
             </div>
@@ -111,68 +127,88 @@
             <div class="hero-photo-block" style="position: relative;">
                 <div class="glass-photo-wrapper"
                     style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; background: var(--glass-bg); border: 2px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2); position: relative; display: flex; align-items: center; justify-content: center;">
-                    <img src="profile.png" alt="Ivan Kiryushov" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="profile.png?v=2" alt="Ivan Kiriushov" class="profile-photo photo-dark" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="profile-light.png?v=2" alt="Ivan Kiriushov" class="profile-photo photo-light" onerror="this.src='profile.png?v=2'" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="services" class="services section-pad">
+    <section id="projects" class="projects section-pad">
         <div class="container">
-            <h2 class="section-title text-center fade-up">Solutions & <span class="accent">Expertise</span></h2>
-            <div class="services-list fade-up">
+            <h2 class="section-title text-center fade-up">Featured <span class="accent">Case Studies</span></h2>
+            <div class="projects-list fade-up">
 
-                <div class="service-card glass-card">
-                    <div class="service-card-header">
-                        <span class="service-title">Workflow Automation & AI</span>
-                    </div>
-                    <div class="service-card-body">
-                        <p>I reduce operational delays by fixing broken workflows with code. I build Python scripts, n8n
-                            pipelines, and RAG AI assistants that navigate your knowledge base and answer questions
-                            instantly — saving your team hundreds of hours on manual data processing.</p>
-                        <div class="service-tags">
+                <!-- AxonBot -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-badge">Enterprise RAG & AI Agent</span>
+                            <h3 class="project-title">AxonBot: Verified AI Answers from Complex Technical Wikis</h3>
+                        </div>
+                        <div class="project-stack">
                             <span>Python</span>
-                            <span>n8n</span>
-                            <span>RAG / Vector DB</span>
-                            <span>Confluence</span>
-                            <span>Jira Automation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card glass-card">
-                    <div class="service-card-header">
-                        <span class="service-title">Bots & System Integrations</span>
-                    </div>
-                    <div class="service-card-body">
-                        <p>I build production-grade bots and industrial integrations to eliminate manual data entry.
-                            Whether wiring Telegram to your CRM or building automated data flows, I ensure your systems
-                            talk to each other reliably.</p>
-                        <div class="service-tags">
-                            <span>FastAPI</span>
                             <span>Aiogram</span>
+                            <span>n8n</span>
+                            <span>Qdrant</span>
+                            <span>GPT-4o</span>
                             <span>Docker</span>
-                            <span>VPS</span>
-                            <span>Webhooks</span>
-                            <span>Google Sheets API</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-block">
+                            <strong>Problem & Cost of Inaction:</strong> In companies with hundreds of complex regulations, standards, and manuals, specialists waste 20–30 minutes searching for a single parameter. Crucial regulations are often ignored — leading to costly mistakes — or senior leads are interrupted constantly, delaying project delivery.
+                        </div>
+                        <div class="project-block">
+                            <strong>Solution & ROI:</strong> The AI agent cuts 20–30 minutes of manual search down to 4.3 seconds. Engineers ask in natural language and receive strictly grounded answers with direct citations to original wiki articles, alongside embedded technical diagrams, GIFs, and video instructions.
+                        </div>
+                        <div class="project-metrics-row">
+                            <div class="project-metric-chip"><i class="fas fa-check-circle"></i> 97% Benchmark Score</div>
+                            <div class="project-metric-chip"><i class="fas fa-vial"></i> 60+ Automated Tests</div>
+                            <div class="project-metric-chip"><i class="fas fa-bolt"></i> 4.3s Average Latency</div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://t.me/bim_axonbot?start=landing" target="_blank" rel="noopener noreferrer" class="btn-project-action btn-action-telegram">
+                                <i class="fab fa-telegram-plane"></i> Try Demo Bot
+                            </a>
+                            <a href="https://youtu.be/70uFZETkw-g" target="_blank" rel="noopener noreferrer" class="btn-project-action btn-action-youtube">
+                                <i class="fab fa-youtube"></i> Watch Demo
+                            </a>
+                            <a href="assets/AxonBot_Landing.pdf" target="_blank" class="btn-project-action btn-action-pdf">
+                                <i class="fas fa-file-pdf"></i> Case Study Slides
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-card glass-card">
-                    <div class="service-card-header">
-                        <span class="service-title">Digital Strategy & Systems Design</span>
+                <!-- DocFlow CRM Bot -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <span class="project-badge">Sales Funnel & CRM Automation</span>
+                            <h3 class="project-title">DocFlow Bot: Lead Qualification & Document Processing Funnel</h3>
+                        </div>
+                        <div class="project-stack">
+                            <span>Python</span>
+                            <span>Aiogram</span>
+                            <span>FastAPI</span>
+                            <span>SQLite</span>
+                            <span>Telegraph API</span>
+                            <span>Docker</span>
+                        </div>
                     </div>
-                    <div class="service-card-body">
-                        <p>Before writing code, I audit processes to maximize ROI. By interviewing your team and mapping
-                            bottlenecks, I design digital systems (Jira structures, SLA frameworks, UI prototypes) that
-                            deliver clear business value, not just isolated features.</p>
-                        <div class="service-tags">
-                            <span>Jira Service Desk</span>
-                            <span>Figma</span>
-                            <span>CustDev</span>
-                            <span>Process Mapping</span>
-                            <span>SLA Design</span>
+                    <div class="project-body">
+                        <div class="project-block">
+                            <strong>Problem & Cost of Inaction:</strong> Sales teams are overwhelmed by repetitive direct messages. Customers hesitate over procedures and provide inconsistent, error-prone data. Manually transferring customer data to production led to expensive document errors, financial losses, and delivery delays.
+                        </div>
+                        <div class="project-block">
+                            <strong>Solution & ROI:</strong> An automated Telegram service handles the primary deal cycle: a native Telegraph knowledge base (instant Instant View articles with video proof) addresses customer doubts, step-by-step FSM validation prevents typos, and a multi-currency calculator (RUB/VND/USDT) provides instant quotes. Clean data flows directly to production.
+                        </div>
+                        <div class="project-metrics-row">
+                            <div class="project-metric-chip"><i class="fas fa-check-double"></i> -87% Form Errors</div>
+                            <div class="project-metric-chip"><i class="fas fa-tachometer-alt"></i> -80% Support Load</div>
+                            <div class="project-metric-chip"><i class="fas fa-shield-alt"></i> Zero Race Conditions</div>
+                            <div class="project-metric-chip"><i class="fas fa-coins"></i> Multi-currency FX</div>
                         </div>
                     </div>
                 </div>
@@ -181,30 +217,61 @@
         </div>
     </section>
 
-    <section id="stats" class="stats">
-        <div class="container fade-up" style="margin-bottom: 40px;">
-            <h2 class="section-title text-center">Efficiency & <span class="accent">Scaling</span></h2>
-        </div>
-        <div class="container stats-grid delay-1 fade-up">
-            <div class="stat-card glass-card">
-                <div class="stat-number">170+</div>
-                <div class="stat-label">Service Desk Cases</div>
-                <div class="stat-desc">System architecture in Jira.</div>
-            </div>
-            <div class="stat-card glass-card">
-                <div class="stat-number">60+</div>
-                <div class="stat-label">Engineering Solutions</div>
-                <div class="stat-desc">Scripts, bots, and R&D (Python).</div>
-            </div>
-            <div class="stat-card glass-card">
-                <div class="stat-number">AI</div>
-                <div class="stat-label">RAG Systems</div>
-                <div class="stat-desc">Automated query for standard regulations.</div>
-            </div>
-            <div class="stat-card glass-card">
-                <div class="stat-number">74</div>
-                <div class="stat-label">Floors</div>
-                <div class="stat-desc">Full coordination (AR, KR, MEP) of the first highly complex skyscraper.</div>
+    <section id="services" class="services section-pad">
+        <div class="container">
+            <h2 class="section-title text-center fade-up">Solutions & <span class="accent">Expertise</span></h2>
+            <div class="services-list fade-up">
+
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">Applied AI & Intelligent Workflows</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>Freeing teams from manual text and document processing. I deploy AI agents that triage incoming emails and requests, extract structured data from contracts and invoices directly into your database, or pull verified answers from internal SOPs with source citations. If the documentation lacks the answer, the system reports it directly instead of guessing.</p>
+                        <div class="service-tags">
+                            <span>AI Agents & Workflows</span>
+                            <span>Document & Audio Parsing</span>
+                            <span>Knowledge Base RAG</span>
+                            <span>Smart Triage</span>
+                            <span>Evaluation Benchmarks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">Workflow Architecture & Systems Audit</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>Before writing code, I audit where your business is actually losing time and money. I map where handoffs between teams break down, eliminate redundant steps, and calculate real automation ROI. I help set up transparent task tracking and service queues, define clear SLAs, and pick the right tech — from agile workflows in n8n, Make, or Zapier to custom backend services.</p>
+                        <div class="service-tags">
+                            <span>Process Mapping</span>
+                            <span>Bottleneck Audit</span>
+                            <span>SLA & Team Metrics</span>
+                            <span>n8n / Make / Zapier</span>
+                            <span>Service Desk & Ticketing</span>
+                            <span>ROI Modeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-card-header">
+                        <span class="service-title">System Integrations & Fault-Tolerant Pipelines</span>
+                    </div>
+                    <div class="service-card-body">
+                        <p>Connecting your scattered tools — CRMs, databases, ERPs, customer messaging channels, and internal team chats into a unified pipeline. Data syncs automatically without manual copy-pasting. If a third-party service hiccups or goes down, automated retry queues ensure no lead or transaction is lost, while duplicate guards keep records clean.</p>
+                        <div class="service-tags">
+                            <span>Event-Driven Architecture</span>
+                            <span>REST API & Webhooks</span>
+                            <span>Fault-Tolerant Pipelines</span>
+                            <span>FastAPI / Python</span>
+                            <span>PostgreSQL / SQLite</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -219,21 +286,15 @@
                     <div class="glass-card timeline-content">
                         <div class="job-header">
                             <div>
-                                <h3>Senior BIM Coordinator</h3>
+                                <h3>Lead BIM Coordinator</h3>
                                 <div class="company">DOGMA</div>
-                                <span class="company-tagline">TOP-5 Residential Developer in Russia</span>
+                                <span class="company-tagline">Top-5 Real Estate Developer in Russia</span>
                             </div>
                             <div class="period">2024 — 2026</div>
                         </div>
                         <ul class="job-details">
-                            <li><strong>System Architecture:</strong> Designed the BIM department workflow in Jira
-                                Service Desk. Handled 170+ cases, with 38% being complex automation and R&D tasks.
-                                Introduced transparent SLAs.</li>
-                            <li><strong>Product Management:</strong> Full-cycle plugin development support. From
-                                conducting provocative CustDev interviews to UI/UX prototyping in Figma.</li>
-                            <li><strong>Engineering & AI:</strong> Development of a Python tool ecosystem. Implemented a
-                                RAG system (AI assistant) for instant navigation through corporate knowledge bases and
-                                standards.</li>
+                            <li><strong>Zero-to-one Process Launch:</strong> Designed the architecture and technical specifications for Jira Service Desk implementation: task ticketing, incident triage SOPs, and R&D automation tracking for 100+ engineers with transparent SLA reporting.</li>
+                            <li><strong>AI & Product Ownership:</strong> Built an internal RAG assistant prototype for SOPs; conducted 20+ CustDev interviews and designed UI/UX in Figma for internal tools (cutting onboarding time by 30%).</li>
                         </ul>
                     </div>
                 </div>
@@ -243,15 +304,14 @@
                     <div class="glass-card timeline-content">
                         <div class="job-header">
                             <div>
-                                <h3>BIM Team Lead (Structures) </h3>
+                                <h3>BIM Lead | Structural Engineering</h3>
                                 <div class="company">WE-ON Group</div>
-                                <span class="company-tagline">Leading engineering firm with deep automation focus</span>
+                                <span class="company-tagline">Leading engineering consultancy focused on automation</span>
                             </div>
                             <div class="period">2022 — 2024</div>
                         </div>
                         <ul class="job-details">
-                            <li><strong>Optimization:</strong> Reduced routine tasks by 20x through automation.
-                                Implemented GTD and Scrum elements into team workflows.</li>
+                            <li><strong>Routine Automation:</strong> Developed custom script suite (Python / Revit API), speeding up project parameter audits 20x (from 15 min to 45 sec). Championed Scrum and GTD workflows.</li>
                         </ul>
                     </div>
                 </div>
@@ -269,21 +329,15 @@
                                 <div class="glass-card timeline-content">
                                     <div class="job-header">
                                         <div>
-                                            <h3>BIM Coordinator</h3>
+                                            <h3>BIM Coordinator / Project Tech Lead</h3>
                                             <div class="company">Severin Development</div>
-                                            <span class="company-tagline">Innovation incubator & birthplace of the
-                                                "Signal"
-                                                ecosystem and 3D-scanning technologies</span>
+                                            <span class="company-tagline">Engineering innovation hub and cradle of Signal ecosystem</span>
                                         </div>
                                         <div class="period">2020 — 2021</div>
                                     </div>
                                     <ul class="job-details">
-                                        <li><strong>Complex Modeling:</strong> Coordination of a 74-story tower (AR, KR,
-                                            MEP) in
-                                            Moscow City.</li>
-                                        <li><strong>R&D / Team Leading:</strong> Development of Scan-to-BIM workflows
-                                            (point
-                                            clouds). Task distribution management.</li>
+                                        <li><strong>74-story Moscow-City Tower:</strong> Aligned LOD/LOI model requirements with executive stakeholders. Established Scan-to-BIM point cloud reconstruction pipeline.</li>
+                                        <li><strong>R&D & Team Leadership:</strong> Researched digital twin facility management models for post-commissioning operations. Conducted technical interviews and built the delivery team.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -320,34 +374,41 @@
         <div class="container fade-up">
             <h2 class="section-title text-center"><span class="accent">Stack</span></h2>
             <div class="skills-grid">
-                <!-- AI & Automation -->
+                <!-- Applied AI -->
                 <div class="glass-card skill-category">
-                    <h3>AI & R&D</h3>
+                    <h3>Applied AI & Knowledge Systems</h3>
                     <div class="skill-tags">
-                        <span>RAG (Vector DB)</span>
+                        <span>RAG Architecture</span>
+                        <span>Vector Databases & Search</span>
                         <span>LLM Orchestration</span>
-                        <span>Aiogram / Telegram API</span>
-                        <span>Prompt Engineering</span>
+                        <span>Voice & Audio AI (STT / TTS)</span>
+                        <span>Structured Data Extraction</span>
+                        <span>Evaluation Benchmarks</span>
                     </div>
                 </div>
-                <!-- Core Dev -->
+                <!-- Process & Systems Architecture -->
                 <div class="glass-card skill-category">
-                    <h3>Automation & Dev</h3>
+                    <h3>Product & Process Architecture</h3>
                     <div class="skill-tags">
-                        <span>Python (Revit API)</span>
-                        <span>Dynamo (Expert)</span>
-                        <span>Meta API / Webhooks</span>
-                        <span>PyRevit / C# (Basic)</span>
+                        <span>BPMN & Sequence Diagrams</span>
+                        <span>Process Mapping & Flowcharts</span>
+                        <span>Service Desk & Ticketing</span>
+                        <span>SLA Frameworks</span>
+                        <span>CustDev & Requirements Analysis</span>
+                        <span>Figma (UI/UX Prototyping)</span>
                     </div>
                 </div>
-                <!-- Management -->
+                <!-- Integration & Backend -->
                 <div class="glass-card skill-category">
-                    <h3>Product & BIM</h3>
+                    <h3>Integration & Core Backend</h3>
                     <div class="skill-tags">
-                        <span>Jira Service Desk</span>
-                        <span>Figma (UI/UX)</span>
-                        <span>CustDev</span>
-                        <span>Revit / Navisworks</span>
+                        <span>Python (Asyncio)</span>
+                        <span>FastAPI</span>
+                        <span>Chatbots & Conversational UI</span>
+                        <span>n8n / Make / Zapier</span>
+                        <span>REST APIs & Webhooks</span>
+                        <span>PostgreSQL / SQLite</span>
+                        <span>Docker / VPS Deployment</span>
                     </div>
                 </div>
             </div>
@@ -362,19 +423,20 @@
                 <p>Available for select automation projects.</p>
             </div>
             <div class="social-links">
-                <a href="https://t.me/bimivan" target="_blank" class="glass-icon"><i
+                <a href="https://t.me/bimivan" target="_blank" class="glass-icon" title="Telegram" aria-label="Telegram"><i
                         class="fab fa-telegram-plane"></i></a>
-                <a href="https://wa.me/79959209584" target="_blank" class="glass-icon"><i
+                <a href="https://wa.me/79959209584" target="_blank" class="glass-icon" title="WhatsApp" aria-label="WhatsApp"><i
                         class="fab fa-whatsapp"></i></a>
-                <a href="https://m.me/kiryvanya" target="_blank" class="glass-icon"><i
+                <a href="https://m.me/kiryvanya" target="_blank" class="glass-icon" title="Messenger" aria-label="Messenger"><i
                         class="fab fa-facebook-messenger"></i></a>
-                <a href="#" target="_blank" class="glass-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/ivan-kiriushov-4121ba403" target="_blank" class="glass-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.upwork.com/freelancers/~010f69036be68d81bb?mp_source=share" target="_blank" class="glass-icon" title="Upwork" aria-label="Upwork"><i class="fab fa-upwork"></i></a>
             </div>
         </div>
     </footer>
 
 
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
 
 </html>
